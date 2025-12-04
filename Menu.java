@@ -21,7 +21,7 @@ public class Menu {
         File inputFile = new File(inputFileName);
 
         //asking for array size/ generating numbers and adding it to the file
-        System.out.print("Enter a integer from 0 - 10000 for how many values you want in your array: ");
+        System.out.print("Enter a integer from 0 - 5,000,000 for how many values you want in your array: ");
         int arraySize = sc.nextInt();
         try {
             FileWriter inputFileWriter = new FileWriter(inputFile);

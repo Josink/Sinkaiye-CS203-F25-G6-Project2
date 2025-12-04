@@ -62,7 +62,7 @@ public class BubbleSort {
         long startTime = System.nanoTime();
         for (int i = 0; i < n - 1; i++) {
             boolean swapped = false;
-            for (int j = 0; j < n - 1; j++) {
+            for (int j = 0; j < n - i - 1; j++) {
                 comparisonCount++;
                 if (array[j] > array[j + 1]) {
                     swap(array, j, j + 1);
@@ -100,7 +100,7 @@ public class BubbleSort {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Insertion sort comparisons: " + comparisonCount);
+        System.out.println("Bubble sort comparisons: " + comparisonCount);
         System.out.println("Swaps comparisons: " + swapCount);
         System.out.println("Time elapsed (MS): " + executionTime + " milliseconds");
     }

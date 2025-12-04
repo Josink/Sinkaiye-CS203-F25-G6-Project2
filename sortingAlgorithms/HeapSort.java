@@ -33,9 +33,9 @@ public class HeapSort {
             array[i] = list.get(i);
         }
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         heapSort(array);
-        long end = System.nanoTime();
+        long end = System.currentTimeMillis();
 
         executionTime = end - start;
 

@@ -95,8 +95,12 @@ public class QuickSort {
             writer.write("\nComparisons: " + comparisonCount);
             writer.write("\nSwaps: " + swapCount);
             writer.write("\nExecution time (ns): " + executionTime);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Insertion sort comparisons: " + comparisonCount);
+        System.out.println("Swaps comparisons: " + swapCount);
+        System.out.println("Time elapsed (MS): " + executionTime + " milliseconds");
     }
 }

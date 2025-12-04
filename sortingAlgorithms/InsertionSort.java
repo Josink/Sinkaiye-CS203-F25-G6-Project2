@@ -44,10 +44,6 @@ public class InsertionSort {
 
         time = time2 - time1;
         writeOutput();
-
-        System.out.println("Insertion sort comparisons: " + comparisons);
-        System.out.println("Swaps comparisons: " + swaps);
-        System.out.println("Time elapsed (MS): " + time + " milliseconds");
     }
 
     public void sort(){
