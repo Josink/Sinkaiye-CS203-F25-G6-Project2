@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SequentialSearch {
+
     File inputFile;
     int[] array;
     String inputFileName;
@@ -18,10 +19,12 @@ public class SequentialSearch {
     int comparisonCount;
 
     public SequentialSearch(String inputFileName, int searchValue) throws FileNotFoundException {
+
         this.inputFileName = inputFileName;
         inputFile = new File(inputFileName);
         this.searchValue = searchValue;
 
+        // Load numbers from file
         Scanner scanner = new Scanner(inputFile);
         ArrayList<Integer> list = new ArrayList<>();
         while (scanner.hasNextInt()) {
@@ -29,26 +32,26 @@ public class SequentialSearch {
         }
         scanner.close();
 
-        // Convert to int array
+        // Convert list to array
         array = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
             array[i] = list.get(i);
         }
 
-        long start = System.nanoTime();
-
+        long start = System.currentTimeMillis();
         int result = sequentialSearch(array, searchValue);
+        long end = System.currentTimeMillis();
 
-        long end = System.nanoTime();
         timeTaken = end - start;
 
+        // Print results
         if (result == -1) {
             System.out.println("The number you are looking for does not exist");
         } else {
             System.out.println("The number you are looking for is at position " + (result + 1));
         }
 
-        System.out.println("Sequential Search Time: " + timeTaken + " ns");
+        System.out.println("Sequential Search Time: " + timeTaken + " ms");
         System.out.println("Comparisons Made: " + comparisonCount);
     }
 

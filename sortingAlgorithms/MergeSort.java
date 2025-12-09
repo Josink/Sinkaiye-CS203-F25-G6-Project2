@@ -47,7 +47,7 @@ public class MergeSort {
             mergeSort(array, l, m);
             mergeSort(array, m + 1, r);
 
-          merge(array, l, m, r);
+            merge(array, l, m, r);
         }
     }
 
